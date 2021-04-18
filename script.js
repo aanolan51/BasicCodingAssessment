@@ -1,26 +1,14 @@
-<<<<<<< HEAD
 //Create the global variables to be used:
-=======
-
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
 var questionIndex;
 var highScoreArray = [];
 var quesDisplay;
 var score = 0;
 var timeStart;
-<<<<<<< HEAD
-=======
-var selection;
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
 var listHighScore;
 var rightAnswerDisplay;
 var userName;
 var timerReduction;
 var oneSecondInterval;
-<<<<<<< HEAD
-=======
-var highScoreData = {};
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
 var startButton = document.getElementById('start_button');
 var nextButton = document.getElementById('next_button');
 var submitButton = document.getElementById('submit_button');
@@ -42,7 +30,6 @@ var choiceDDisplay;
 //Create an array of objects for each question and the corresponding answer choices, and the correct answer:
 var questionBank = [
   { //object one
-<<<<<<< HEAD
     question: "What does a for loop do?",
   
     choiceA: "Executes code, or stops executing it, based on a boolean condition at the end.",
@@ -100,45 +87,6 @@ var questionBank = [
 ];
 
 
-=======
-    question: "FirstQuestion?",
-  
-    choiceA: "That",
-    choiceB: "Something",
-    choiceC: "A keyword referring to the object it belongs to",
-    choiceD: "I don't know.",
-    
-    rightAnswer: "A keyword referring to the object it belongs to"
-  },
-
-  { //object two
-    question: "Second Questions",
-    
-    choiceA:"laskjdhf",
-    choiceB: 'laksdjf',
-    choiceC: "laksjdhf",
-    choiceD: "alksjdhf",
-  
-    rightAnswer: "alksjdhf"
-  },
-
-  { //object three
-    question: "Third Questions",
-    
-    choiceA:"lasdff",
-    choiceB: 'ljrhggfhnbbb',
-    choiceC: "qeriuwern",
-    choiceD: "alksjdhf",
-  
-    rightAnswer: "alksjdhf"
-  }
-
-];
-
-
-
-
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
 //Get a question and corresponding answer from the question bank to display:
 
 function displayQuestion(){
@@ -152,11 +100,7 @@ function displayQuestion(){
     questionIndex = Math.floor(Math.random()* questionPool.length);
 
     currentQuestion = questionPool[questionIndex].question;
-<<<<<<< HEAD
     //console.log(currentQuestion);
-=======
-    console.log(currentQuestion);
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
     document.getElementById("quesDisplay").textContent = currentQuestion;
   
     choiceADisplay = questionPool[questionIndex].choiceA;
@@ -190,12 +134,7 @@ function checkAnswer(){
   //Adding an event listner. When an option is selected, a variable selection is set to the corresponding label text which will be 
   //matched to the right answer for grading. If the right answer is selected, one point will be added. Commented out console.log tests.
   document.getElementById('A').addEventListener('click', function(){
-<<<<<<< HEAD
     if(document.getElementById('A').checked){      
-=======
-    if(document.getElementById('A').checked){
-      
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
       if(choiceADisplay == rightAnswerDisplay){
         //console.log('Right answer chosen!')
         score++;        
@@ -206,10 +145,6 @@ function checkAnswer(){
   document.getElementById('B').addEventListener('click', function(){
     if(document.getElementById('B').checked){
       //console.log(choiceBDisplay);
-<<<<<<< HEAD
-=======
-
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
       if(choiceBDisplay == rightAnswerDisplay){
         //console.log('Right answer chosen!')
         score++;        
@@ -219,12 +154,7 @@ function checkAnswer(){
 
   document.getElementById('C').addEventListener('click', function(){
     if(document.getElementById('C').checked){
-<<<<<<< HEAD
       //console.log(choiceCDisplay)      
-=======
-      //console.log(choiceCDisplay)
-      
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
       if(choiceCDisplay == rightAnswerDisplay){
         //console.log('Right answer chosen!')
         score++;        
@@ -235,10 +165,6 @@ function checkAnswer(){
   document.getElementById('D').addEventListener('click', function(){
     if(document.getElementById('D').checked){
       //console.log(choiceDDisplay);
-<<<<<<< HEAD
-=======
-
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
       if(choiceDDisplay == rightAnswerDisplay){
         //console.log('Right answer chosen!');
         score++;        
@@ -256,11 +182,7 @@ function hideStart(){
 
 
 function timerCountdown(){
-<<<<<<< HEAD
   timeStart = 300;
-=======
-  timeStart = 200;
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
 
   oneSecondInterval = setInterval(function(){    
     //Display how much time is left if timer is still >0 seconds and subtract one second:
@@ -269,10 +191,6 @@ function timerCountdown(){
       timeStart--;
     }
     
-<<<<<<< HEAD
-=======
-   
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
     if(timeStart == 0){
       //clear the timer interval:
       clearInterval(oneSecondInterval);
@@ -284,7 +202,6 @@ function timerCountdown(){
 
 
 function wrongAnswerTimer(){
-<<<<<<< HEAD
   //Add event listeners and check if answer is correct, if wrong, reduce the timeStart variable by a larger jump. 
   //This function will be used on the next button, so that it will only take time off once the answer
   //is officially graded. Console.log testing has been commented out.
@@ -295,93 +212,43 @@ function wrongAnswerTimer(){
     if(choiceADisplay !== rightAnswerDisplay){
       timeStart -= 40;
       //console.log('choice a is wrong');             
-=======
-  //Add event listeners and check if answer is correct, if wrong, use the timerReduction. 
-  //This function will be used on the next button, so that it will only take time off once the answer
-  //is officially graded.
-  console.log('WRONG ANSWER TIMER BEING CALLED');
-  
-  if(document.getElementById('A').checked){
-    console.log('A being reduced');
-  
-    if(choiceADisplay !== rightAnswerDisplay){
-      timeStart -= 40;
-      console.log('choice a is wrong');             
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
     } 
   }
 
   if(document.getElementById('B').checked){
-<<<<<<< HEAD
     //console.log('B being reduced');    
     if(choiceBDisplay !== rightAnswerDisplay){
       timeStart -= 40; 
       //console.log('choice b is wrong');            
-=======
-    console.log('B being reduced');
-    
-    if(choiceBDisplay !== rightAnswerDisplay){
-      timeStart -= 40; 
-      console.log('choice b is wrong');            
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
     } 
   }
 
   if(document.getElementById('C').checked){
-<<<<<<< HEAD
     //console.log('C being reduced');    
     if(choiceCDisplay !== rightAnswerDisplay){
       timeStart -= 40;  
       //console.log('choice c is wrong');            
-=======
-    console.log('C being reduced');
-    
-    if(choiceCDisplay !== rightAnswerDisplay){
-      timeStart -= 40;  
-      console.log('choice c is wrong');            
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
     } 
   }
 
   if(document.getElementById('D').checked){
-<<<<<<< HEAD
     //console.log('D being reduced');
     if(choiceDDisplay !== rightAnswerDisplay){
       timeStart -= 40;
       //console.log('choice d is wrong');     
-=======
-    console.log('D being reduced');
-    if(choiceDDisplay !== rightAnswerDisplay){
-      timeStart -= 40;
-      console.log('choice d is wrong');     
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
     } 
   } 
 };
 
 
 
-<<<<<<< HEAD
-=======
-function highScores(){
-  quizPage.style.display = 'none';
-  scorePage.style.display = 'inline-block';
-};
-
-
-
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
 function submit(){
     //Clear timer if it hasn't reached 0 yet:
   clearInterval(oneSecondInterval);
 
   //Take in username:
   userName = prompt("What is your username?");
-<<<<<<< HEAD
   //console.log(userName);
-=======
-  console.log(userName);
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
 
   quizPage.style.display = 'none';
   scorePage.style.display = 'inline-block';  
@@ -395,31 +262,6 @@ function submit(){
   //Set the local storage key and value:
   window.localStorage.setItem(userName, score);
 
-<<<<<<< HEAD
-=======
-  //Create the list element for the highscore:
-  listHighScore = document.createElement('li');
-    
-
-  //Set an ID attribute to created list element:
-  listHighScore.setAttribute('id', 'highScoreLi')
-
-  //Append the created list element for the high score to the <ul> tag:
-  highScoreList.appendChild(listHighScore);
-  
-   
-  //Create the text content that will go into the list element:
-  //listHighScore.textContent = userName + " got " + window.localStorage.getItem(userName) +" %";
-
-  //listHighScore.textContent = window.localStorage.getItem(userName) +" %";
-
-  //To-Do:
-  //put items into array      DONE
-  //sort array high to low    DONE
-  // print first 5 items
-  //loop creating li elements for each array element
-
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
 
   //get all the keys from the local storage object and set them equal to a variable keys:
   let keys = Object.keys(localStorage);
@@ -427,13 +269,8 @@ function submit(){
   //For all the keys from local storage, loop through each one and push as an object {} to the highScoreArray. Console.log for testing
   for (i = 0; i <keys.length; i++){
     highScoreArray.push({name: keys[i], score: localStorage.getItem(keys[i])});
-<<<<<<< HEAD
     //console.log('HIGHSCORE ARRAY!');
     //console.log(highScoreArray);
-=======
-    console.log('HIGHSCORE ARRAY!');
-    console.log(highScoreArray);
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
   }
 
   //Sort the array from high to low in order to create a high scores list in order:
@@ -441,7 +278,6 @@ function submit(){
     return high.score - low.score;
   });
   //console.log testing to make sure the array is ordered from high to low:
-<<<<<<< HEAD
   //console.log('sorted array');
   //console.log(highScoreArray);
 
@@ -465,12 +301,6 @@ function submit(){
     listHighScore.textContent =  topFiveArray[i].name + ' got ' + topFiveArray[i].score + ' %';
   }
 
-=======
-  console.log('sorted array');
-  console.log(highScoreArray);
-
-  //now create a for loop for li elements to push in top 5 high scores:
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
 };
 
 
@@ -505,12 +335,6 @@ function startQuiz(){
     
   });
 
-<<<<<<< HEAD
-=======
-   //within the event listener for nextButton clicks, if the array of questions is 0, hide the nextButton.
-   
-
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
   //Run the submit button function when the submit button is clicked:
   submitButton.addEventListener('click', function(){
     submit();
@@ -533,11 +357,7 @@ startButton.addEventListener('click', startQuiz);
 
 
 document.getElementById('Re-try').addEventListener('click', function(){
-<<<<<<< HEAD
   //Reload the original start page:
-=======
-  
->>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
   window.location.reload();
   
 });

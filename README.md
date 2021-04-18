@@ -5,11 +5,11 @@ This Basic Coding Assessment is a quiz designed using HTML, CSS, and vanilla Jav
 ## Usage
 When the quiz loads, click on start to begin. You will be given 300 seconds to complete a quiz to display your coding knowledge! For each wrong answer though, you will lose 40 seconds from your timer. Click next to go through the questions, and submit when you are finished. You will not be able to go back to previous questions, so think carefully and make sure each question has been answered before hitting next. Upon submission, please input yor username and see how you've done compared to a high score board! Remeber, you can always retry the quiz to get a better score. Goodluck!
 
-![Start Page](BasicCodingAssessment/Assets/StartQuiz.png)
-![Questions](BasicCodingAssessment/Assets/Questions.png)
-![Submit Page](BasicCodingAssessment/Assets/SubmitPage.png)
-![Input your username](BasicCodingAssessment/Assets/userinput.png)
-![High score page](BasicCodingAssessment\Assets\HighScorePage.png)
+![Start Page](Assets/StartQuiz.png)
+![Questions](Assets/Questions.png)
+![Submit Page](Assets/SubmitPage.png)
+![Input your username](Assets/userinput.png)
+![High score page](Assets/HighScorePage.png)
 
 
 ## Credits

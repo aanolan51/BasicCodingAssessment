@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Basic Coding Quiz</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./style.css">
+  </head> 
+
+  <body>
+
+    <button class = 'button' id = 'highScore' onclick="submit()">High Scores</button>
+    <div class="container" id = 'quiz_page'>
+      <h1 class = "heading">Basic Coding Quiz</h1>
+      
+      <div>
+        <button id = 'start_button' onclick="hideStart()">
+          START
+        </button>
+      </div>
+
+      <div class="quiz">
+
+        <h4 id = "quesDisplay">Instructions</h4>
+        <!--Create radio buttons with corresponding input/label. The radio button id matches the label for: to link the two pieces.
+        The value is a unique identifier that will be used when looking to match the content of the item to the "rightAnswer" and scoring accordingly. The id of the 
+        label is used to push in an answer choice from the function call in javascript to generate a question from the array.-->
+        <div class = "form_design">
+          <input type = 'radio' name = 'choice' id = 'A' class = 'radio_button' value = 'choiceA'> <!--name attribute used as a reference to link it to the label.-->
+          <label  for = 'A' id = 'choiceADisplay'>Click start to begin.</label><br> <!--label id is used to call data from javascript and put it into the field-->
+          
+          <input type = 'radio' name = 'choice' id = 'B' class = 'radio_button' value = 'choiceB'>
+          <label  for = 'B' id = 'choiceBDisplay'>Select your answer and hit next.</label><br>
+  
+          <input type = 'radio' name = 'choice' id = 'C' class = 'radio_button' value = 'choiceC'>
+          <label for = 'C' id = 'choiceCDisplay'>Hit SUBMIT at the end and log your highscore.</label><br>
+  
+          <input type = 'radio' name = 'choice' id = 'D' class = 'radio_button' value = 'choiceD'>
+          <label  for = 'D' id = 'choiceDDisplay'>This quiz is timed. Good luck!</label><br>
+
+          <button id = 'next_button'>
+            NEXT
+          </button>
+          
+          <button id = 'submit_button'>
+            SUBMIT
+          </button>
+       
+  
+        </div>
+      </div>
+
+      
+
+        <div id = "time">
+          Seconds Left:
+          <div id = 'timer'>
+            300
+          </div>
+        </div>
+
+    </div>
+
+    
+    
+    
+  <!--Score Page - hidden until submit button clicked-->
+    <div class = 'container' id = 'score_page'>
+      <h1 class = "heading">Your Score:</h1>
+      <div>
+        <h2 id= 'recentScore'></h2>
+      </div>
+
+      <h1 class = "heading">High Scores:</h1>
+      <div>
+        <ul id= 'highScoreList'></ul>
+      </div>
+
+      <button class = 'button' id = 'Re-try'>Re-Try</button>
+
+    </div>
+
+        
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,4 +1,5 @@
 # BasicCodingAssessment
+<<<<<<< HEAD
 ## Description
 This Basic Coding Assessment is a quiz designed using HTML, CSS, and vanilla Javascript. The timed quiz randomly selects questions from a question bank, keeps a running score, and will deduct an additional 40 seconds from the user's available time if the wrong answer is selected. Upon submission, the user will have an opportunity to log their username and get their score. The top five scores of recently logged quizzes will display on the final page as well. A re-try button will appear, and the user will be brought back to the start and have the ability to take the quiz again. A highscores button has been added, and at any point the user may click it and be brought to the final scoring page with the logged highscores. This project contains a lot of major elements, including utilizing objects within an array for a question bank, pulling this information and writing it to HTML elements within a javascript function, and comparing the selected answer to the correct answer in order to score an item. EventListeners were used for the button clicks, and the buttons are either displayed or hidden based on whether or not they are needed. Scores are then saved into local sotrage, put into a scoring array, sorted and pulled back out to display saved highscores. I learned a lot with combining various dynamic elements, pushing new content to predetermined HTML elements, and utilizing local storage. 
 
@@ -10,6 +11,8 @@ When the quiz loads, click on start to begin. You will be given 300 seconds to c
 ![Submit Page](BasicCodingAssessment/Assets/SubmitPage.png)
 ![Input your username](BasicCodingAssessment/Assets/userinput.png)
 ![High score page](BasicCodingAssessment\Assets\HighScorePage.png)
+=======
+>>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
 
 
 ## Credits

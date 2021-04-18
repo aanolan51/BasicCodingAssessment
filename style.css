@@ -49,14 +49,23 @@ body {
   .quiz {
     display:block;
     text-align: center;
+<<<<<<< HEAD
     margin-left: 25%;
     margin-right: 5%;
+=======
+    margin-left: 30%;
+>>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
     padding-bottom: 40px;
   }
 
   #quesDisplay{
+<<<<<<< HEAD
     text-align: center;
     margin-right: 35%;
+=======
+    text-align: left;
+    margin-left: 15%;
+>>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
   }
 
   .form_design{
@@ -152,7 +161,11 @@ body {
   #highScoreLi{
     list-style-position: inside;
     list-style-type: decimal;
+<<<<<<< HEAD
     text-align: left;
+=======
+
+>>>>>>> 5d6d620f5837abcd1eaa664ff520e3311215d741
   }
 
  

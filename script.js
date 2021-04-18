@@ -9,6 +9,7 @@ var rightAnswerDisplay;
 var userName;
 var timerReduction;
 var oneSecondInterval;
+var highScoreButton = document.getElementById('highScore');
 var startButton = document.getElementById('start_button');
 var nextButton = document.getElementById('next_button');
 var submitButton = document.getElementById('submit_button');
@@ -251,7 +252,8 @@ function submit(){
   //console.log(userName);
 
   quizPage.style.display = 'none';
-  scorePage.style.display = 'inline-block';  
+  scorePage.style.display = 'inline-block';
+  highScoreButton.style.display = 'none'; 
   
   //Change the score to a string and write it to the header element with the id of recentScore:
   score = score.toString();
